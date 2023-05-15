@@ -1,7 +1,6 @@
 ﻿################################################################################
 ## Инициализация
 ################################################################################
-
 ## Оператор init offset повышает приоритет инициализации в этом файле над
 ## другими файлами, из-за чего инициализация здесь запускается первее.
 init offset = -2
@@ -87,7 +86,7 @@ define gui.title_text_size = 75
 
 ## Изображения, используемые в главном и игровом меню.
 define gui.main_menu_background = "gui/main_menu.png"
-define gui.game_menu_background = "gui/game_menu.png"
+define gui.game_menu_background = "menu_slideshow"
 
 
 ## Диалог ######################################################################
@@ -105,7 +104,7 @@ define gui.textbox_yalign = 1.0
 ## Местоположение имени говорящего персонажа по отношению к текстовому окну.
 ## Это могут быть целые значения в пикселях слева и сверху от начала окна или
 ## процентное отношение, например, 0.5 для центрирования.
-define gui.name_xpos = 360
+define gui.name_xpos = 125
 define gui.name_ypos = 0
 
 ## Горизонтальное выравнивание имени персонажа. Это может быть 0.0 для
@@ -120,17 +119,17 @@ define gui.namebox_height = None
 
 ## Границы окна, содержащего имя персонажа слева, сверху, справа и снизу по
 ## порядку.
-define gui.namebox_borders = Borders(5, 5, 5, 5)
+define gui.namebox_borders = Borders(0, 5, 5, 5)
 
 ## Если True, фон текстового окна будет моститься (расширяться по эффекту
 ## плитки). Если False, фон текстового окна будет фиксированным.
-define gui.namebox_tile = False
+define gui.namebox_tile = True
 
 
 ## Размещение диалога по отношению к текстовому окну. Это могут быть целые
 ## значения в пикселях слева и сверху от текстового окна или процентное
 ## отношение, например, 0.5 для центрирования.
-define gui.dialogue_xpos = 402
+define gui.dialogue_xpos = 40
 define gui.dialogue_ypos = 75
 
 ## Максимальная ширина текста диалога в пикселях.
@@ -373,7 +372,7 @@ define gui.nvl_list_length = 6
 
 ## Высота доступных строчек в режиме NVL. Установите на None, чтобы строчки
 ## динамически регулировали свою высоту.
-define gui.nvl_height = 173
+define gui.nvl_height = 175
 
 ## Интервал между строчками в режиме NVL, если gui.nvl_height имеет значение
 ## None, а также между строчками и меню режима NVL.
@@ -387,7 +386,7 @@ define gui.nvl_name_width = 225
 define gui.nvl_name_xalign = 1.0
 
 ## Местоположение, ширина и выравнивание диалогового текста.
-define gui.nvl_text_xpos = 675
+define gui.nvl_text_xpos = 500
 define gui.nvl_text_ypos = 12
 define gui.nvl_text_width = 885
 define gui.nvl_text_xalign = 0.0
