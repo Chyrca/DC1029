@@ -4,8 +4,7 @@
 
 init offset = -1
 
-
-################################################################################
+#######################################################################
 ## Стили
 ################################################################################
 
@@ -349,32 +348,19 @@ style navigation_button_text:
 ## https://www.renpy.org/doc/html/screen_special.html#main-menu
 
 screen main_menu():
-
     ## Этот тег гарантирует, что любой другой экран с тем же тегом будет
     ## заменять этот.
-    tag menu
+ tag menu
+ imagemap:
+   ground "gui/main_menu.png"
+   idle "gui/menu_normal.png"
+   hover "gui/menu_hover.png"
 
-    add gui.main_menu_background
-
-    ## Эта пустая рамка затеняет главное меню.
-    frame:
-        style "main_menu_frame"
-
-    ## Оператор use включает отображение другого экрана в данном. Актуальное
-    ## содержание главного меню находится на экране навигации.
-    use navigation
-
-    if gui.show_name:
-
-        vbox:
-            style "main_menu_vbox"
-
-            text "[config.name!t]":
-                style "main_menu_title"
-
-            text "[config.version]":
-                style "main_menu_version"
-
+   hotspot (85,198,170,50) action Start ()
+   hotspot (85,255,237,50) action ShowMenu ("load")
+   hotspot (85,311,274,50) action ShowMenu ("preferences")
+   hotspot (85,368,212,50) action ShowMenu ("about")
+   hotspot (85,487,200,50) action Quit (confirm=True)
 
 style main_menu_frame is empty
 style main_menu_vbox is vbox
